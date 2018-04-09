@@ -10,8 +10,11 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.6.4'
 
 group :development, :test do
-  gem 'sqlite3',      '1.3.13'
-  gem 'byebug', '9.0.6', platform: :mri
+  gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem 'pry-doc'    # methodを表示
+  gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
+  gem 'pry-stack_explorer' # スタックをたどれる
+  gem 'sqlite3', '1.3.13'
 end
 
 group :development do
