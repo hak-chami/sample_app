@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.4'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.3.1'
 gem 'sprockets'
 gem 'devise'
+gem 'faker'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.2.0'
