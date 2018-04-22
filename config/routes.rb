@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+
   devise_for :users, :controllers => {
     :registrations => "registrations"
   }
@@ -8,11 +10,12 @@ Rails.application.routes.draw do
     end
   end
   resources :microposts,    only: [:create, :destroy]
+  resources :contacts,    only: [:create]
   resources :relationships, only: [:create, :destroy]
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/contact', to: 'contacts#new', via: 'get'
   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
